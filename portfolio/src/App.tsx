@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import Hero from './components/Main/Hero';
 import Skills from './components/Main/Skills';
 import Projects from './components/Main/Projects';
+import Experience from './components/Main/Experience';
 function App() {
 
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hero/>
       <Skills/>
       <Projects/>
+      <Experience/>
     </>
   )
 }
