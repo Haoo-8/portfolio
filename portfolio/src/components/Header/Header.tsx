@@ -1,10 +1,11 @@
 import { useState } from "react";
 import '../../styles/components/header.css';
-import { useDarkMode } from "../../hooks";
+import { useDarkMode, useScrollPosition } from "../../hooks";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const { isDark, toggle } = useDarkMode();
+  const { direction } = useScrollPosition();
 
   const links = [
     { id: "about", label: "Giới Thiệu" },
@@ -16,7 +17,7 @@ export default function Header() {
   ];
 
   return (
-    <header style={{backgroundColor: "var(--color-bg)", color: "var(--color-text)"}} className="sticky top-0 z-50 bg-white shadow-md">
+    <header style={{backgroundColor: "var(--color-bg)", color: "var(--color-text)"}} className={`sticky top-0 z-50 bg-white shadow-md transition-transform duration-300 ${direction === "down" ? "-translate-y-full" : "translate-y-0"}`}>
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center"> 
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">

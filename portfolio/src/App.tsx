@@ -7,6 +7,7 @@ import Experience from "./components/Main/Experience";
 import Education from "./components/Main/Education";
 import Contact from "./components/Main/Contact";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Education />
       <Contact />
       <Footer />
+      <ScrollToTop/>
     </>
   );
 }
