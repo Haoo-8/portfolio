@@ -27,7 +27,7 @@ export default function Education() {
             Nền tảng giáo dục và các chứng chỉ chuyên môn của tôi.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" >
           {/* Degrees */}
           <div>
             <h3 className="text-2xl font-bold mb-6 text-gray-800 text-center">
@@ -36,7 +36,7 @@ export default function Education() {
             {degrees.map((d, i) => (
               <div
                 key={i}
-                className="card bg-white p-6 rounded-xl shadow-md mb-6"
+                className="card-ed bg-white p-6 rounded-xl shadow-md mb-6"
               >
                 <div className="flex justify-between flex-wrap gap-2 mb-3">
                   <h4 className="text-xl font-bold text-gray-800">{d.title}</h4>
@@ -57,7 +57,7 @@ export default function Education() {
             {certs.map((c, i) => (
               <div
                 key={i}
-                className="card bg-white p-6 rounded-xl shadow-md mb-6"
+                className="card-ed bg-white p-6 rounded-xl shadow-md mb-6"
               >
                 <div className="flex justify-between flex-wrap gap-2 mb-3">
                   <h4 className="text-xl font-bold text-gray-800">{c.title}</h4>
