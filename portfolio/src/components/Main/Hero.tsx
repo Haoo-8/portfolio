@@ -1,5 +1,9 @@
 import '../../styles/components/hero.css';
+import { UseTypingEffectOptions } from '../../hooks/useTypingEffect';
 export default function Hero() {
+  const { displayText, isTyping, isComplete } = UseTypingEffectOptions(
+    ["Lập Trình Viên Website & Mobile App"], {speed: 120, deleteSpeed: 50, pauseTime: 5000, loop: true}
+  );
   return (
     <section id="about" className="section bg-blue-50">
       <div className="container mx-auto px-6">
@@ -7,11 +11,12 @@ export default function Hero() {
           {/*Left Content */}
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
-              Xin chào, tôi là<span className="text-blue-600">VÕ NHẬT HÀO</span>
+              Xin chào, tôi là<span className="text-blue-600"> VÕ NHẬT HÀO</span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-gray-600 mb-6">
-              Lập Trình Viên Website & Mobile App
+              {displayText}<span className='animation-blink'>|</span>
             </h2>
+            {!isTyping && !isComplete}
             <p className="text-gray-600 mb-8 text-lg">
               Tôi chuyên phát triển các ứng dụng web và mobile với Flutter,
               Python và các công nghệ hiện đại. Với đam mê về lập trình và giải
