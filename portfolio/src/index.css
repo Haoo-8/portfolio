@@ -82,3 +82,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@keyframes blink {
+  0%, 50% {opacity: 1;}
+  50.01%, 100% {opacity: 0;}
+}
+
+.animate-blink {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s step-start infinite;
+}
