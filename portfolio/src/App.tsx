@@ -4,6 +4,7 @@ import Hero from './components/Main/Hero';
 import Skills from './components/Main/Skills';
 import Projects from './components/Main/Projects';
 import Experience from './components/Main/Experience';
+import Education from './components/Main/Education';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Skills/>
       <Projects/>
       <Experience/>
+      <Education/>
     </>
   )
 }
