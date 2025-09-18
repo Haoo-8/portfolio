@@ -1,3 +1,4 @@
+import '../../styles/components/hero.css';
 export default function Hero() {
   return (
     <section id="about" className="section bg-blue-50">
@@ -35,9 +36,9 @@ export default function Hero() {
           {/*Right Avatar */}
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-full flex justify-center items-center shadow-lg">
-              <div className="text-8xl text-blue-600">
+              {/* <div className="text-8xl text-blue-600">
                 <i className="fas fas-user-circle"></i>
-              </div>
+              </div> */}
               <img
                 src="/avatar.png"
                 alt="Profile"

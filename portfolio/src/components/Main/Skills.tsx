@@ -1,3 +1,4 @@
+import '../../styles/components/skills.css';
 export default function Skills() {
   return (
     <section id="skills" className="section">
@@ -6,7 +7,7 @@ export default function Skills() {
           <h2 className="text-3xl font-bold mb-3 text-gray-800">
             Kỹ Năng Chuyên Môn
           </h2>
-          <p className="tẽt-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Những công nghệ và kỹ năng tôi sử dụng để xây dựng các ứng dụng web
             và mobile hiện đại.
           </p>
@@ -22,10 +23,10 @@ export default function Skills() {
               Frontend Development
             </h3>
             <ul className="space-y-2 text-gray-600">
-              <li>HTML5, CSS3, JavaScript</li>
-              <li>React.js / Next.js</li>
-              <li>Responsive Design</li>
-              <li>Tailwind CSS / SCSS</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>HTML5, CSS3, JavaScript</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>React.js / Next.js</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Responsive Design</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Tailwind CSS / SCSS</li>
             </ul>
           </div>
           {/* Mobile */}
@@ -37,10 +38,10 @@ export default function Skills() {
               Mobile Development
             </h3>
             <ul className="space-y-2 text-gray-600">
-              <li>Flutter & Dart</li>
-              <li>Firebase Integration</li>
-              <li>State Management</li>
-              <li>Native APIs & SDKs</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Flutter & Dart</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Firebase Integration</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>State Management</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Native APIs & SDKs</li>
             </ul>
           </div>
           {/* Backend */}
@@ -52,10 +53,10 @@ export default function Skills() {
               Backend Development
             </h3>
             <ul className="space-y-2 text-gray-600">
-              <li>Python & Django/Flask</li>
-              <li>Node.js & Express</li>
-              <li>RESTful APIs</li>
-              <li>SQL & NoSQL Databases</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Python & Django/Flask</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Node.js & Express</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>RESTful APIs</li>
+              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>SQL & NoSQL Databases</li>
             </ul>
           </div>
         </div>
