@@ -1,5 +1,76 @@
-import '../../styles/components/skills.css';
+import "../../styles/components/skills.css";
+import CardSkill from "../Card/CardSkill";
 export default function Skills() {
+  const skillCards = [
+    {
+      iconClass: "fas fa-laptop-code",
+      iconColor: "text-blue-600",
+      title: "Frontend",
+      skills: [
+        "HTML5, CSS3, JavaScript",
+        "React.js / Next.js",
+        "Responsive Design",
+        "Tailwind CSS / SCSS",
+      ],
+    },
+    {
+      iconClass: "fas fa-mobile-alt",
+      iconColor: "text-green-600",
+      title: "Mobile",
+      skills: ["Flutter & Dart", "Native APIs", "App Store Deploy"],
+    },
+    {
+      iconClass: "fas fa-server",
+      iconColor: "text-purple-600",
+      title: "Backend",
+      skills: ["Python / Node.js", "RESTful APIs", "Microservices"],
+    },
+    {
+      iconClass: "fas fa-cloud",
+      iconColor: "text-orange-600",
+      title: "DevOps & Cloud",
+      skills: ["Docker", "AWS", "CI/CD Pipelines"],
+    },
+    {
+      iconClass: "fas fa-database",
+      iconColor: "text-red-600",
+      title: "Database",
+      skills: ["PostgreSQL", "MongoDB", "Redis"],
+    },
+    {
+      iconClass: "fas fa-shield-alt",
+      iconColor: "text-yellow-600",
+      title: "Security",
+      skills: [
+        "OWASP Security",
+        "JWT / OAuth",
+        "SSL/TLS",
+        "Penetration Testing",
+      ],
+    },
+    {
+      iconClass: "fas fa-tools",
+      iconColor: "text-indigo-600",
+      title: "Tools & Others",
+      skills: [
+        "Git / GitHub",
+        "Agile / Scrum",
+        "Testing (Jest, Pytest)",
+        "Performance Optimization",
+      ],
+    },
+    {
+      iconClass: "fas fa-sitemap",
+      iconColor: "text-teal-600",
+      title: "Architecture",
+      skills: [
+        "System Design",
+        "Scalable Architecture",
+        "Event-Driven Design",
+        "Load Balancing",
+      ],
+    },
+  ];
   return (
     <section id="skills" className="section">
       <div className="container mx-auto px-6">
@@ -14,51 +85,9 @@ export default function Skills() {
         </div>
         {/* Skill Cards*/}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Frontend */}
-          <div className="skill-card bg-white p-6 rounded-xl shadow-md">
-            <div className="text-4xl text-blue-600 mb-4">
-              <i className="fas fa-laptop-code"></i>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">
-              Frontend Development
-            </h3>
-            <ul className="space-y-2 text-gray-600">
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>HTML5, CSS3, JavaScript</li>
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>React.js / Next.js</li>
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Responsive Design</li>
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Tailwind CSS / SCSS</li>
-            </ul>
-          </div>
-          {/* Mobile */}
-          <div className="skill-card bg-white p-6 rounded-xl shadow-md">
-            <div className="text-4xl text-blue-600 mb-4">
-              <i className="fas fa-mobile-alt"></i>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">
-              Mobile Development
-            </h3>
-            <ul className="space-y-2 text-gray-600">
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Flutter & Dart</li>
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Firebase Integration</li>
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>State Management</li>
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Native APIs & SDKs</li>
-            </ul>
-          </div>
-          {/* Backend */}
-          <div className="skill-card bg-white p-6 rounded-xl shadow-md">
-            <div className="text-4xl text-blue-600 mb-4">
-              <i className="fas fa-server"></i>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-gray-800">
-              Backend Development
-            </h3>
-            <ul className="space-y-2 text-gray-600">
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Python & Django/Flask</li>
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>Node.js & Express</li>
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>RESTful APIs</li>
-              <li><i className="fas fa-check-circle text-green-500 mr-2"></i>SQL & NoSQL Databases</li>
-            </ul>
-          </div>
+          {skillCards.map((card, index) => (
+            <CardSkill key={index} {...card} />
+          ))}
         </div>
         {/* Progress Bars */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
