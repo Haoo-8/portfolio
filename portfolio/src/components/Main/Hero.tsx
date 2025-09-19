@@ -44,7 +44,15 @@ export default function Hero() {
               >
                 Xem Dự Án
               </a>
-              <a href="/VoNhatHao_CV_ThucTapSinhIT.pdf" download className=" text-gray-400 px-6 py-3 rounded-lg hover:text-gray-700 transition">Tải CV</a>
+              <a
+                href="/VoNhatHao_CV_ThucTapSinhIT.pdf"
+                // download
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-gray-400 px-6 py-3 rounded-lg hover:text-gray-700 transition"
+              >
+                Xem CV
+              </a>
             </div>
           </div>
           {/*Right Avatar */}
