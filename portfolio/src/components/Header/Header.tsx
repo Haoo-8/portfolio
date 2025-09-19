@@ -1,24 +1,30 @@
 import { useState } from "react";
-import '../../styles/components/header.css';
-import { useDarkMode, useScrollPosition } from "../../hooks";
+import "../../styles/components/header.css";
+import { useDarkMode, useLanguage, useScrollPosition } from "../../hooks";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const { isDark, toggle } = useDarkMode();
   const { direction } = useScrollPosition();
+  const { t, toggleLang, lang } = useLanguage();
 
   const links = [
-    { id: "about", label: "Giới Thiệu" },
-    { id: "skills", label: "Kỹ Năng" },
-    { id: "projects", label: "Dự Án" },
-    { id: "experience", label: "Kinh Nghiệm" },
-    { id: "education", label: "Học Vấn" },
-    { id: "contact", label: "Liên Hệ" },
+    { id: "about", label: t("about") },
+    { id: "skills", label: t("skills") },
+    { id: "projects", label: t("projects") },
+    { id: "experience", label: t("experience") },
+    { id: "education", label: t("education") },
+    { id: "contact", label: t("contact") },
   ];
 
   return (
-    <header style={{backgroundColor: "var(--color-bg)", color: "var(--color-text)"}} className={`sticky top-0 z-50 bg-white shadow-md transition-transform duration-300 ${direction === "down" ? "-translate-y-full" : "translate-y-0"}`}>
-      <nav className="container mx-auto px-6 py-3 flex justify-between items-center"> 
+    <header
+      style={{ backgroundColor: "var(--color-bg)", color: "var(--color-text)" }}
+      className={`sticky top-0 z-50 bg-white shadow-md transition-transform duration-300 ${
+        direction === "down" ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
+      <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">
           Dev<span className="text-gray-800">Portfolio</span>
@@ -39,6 +45,7 @@ export default function Header() {
           <button
             onClick={toggle}
             className="ml-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            aria-label="Sun or Moon"
           >
             {isDark ? (
               <i className="fas fa-sun text-yellow-400"></i>
@@ -46,12 +53,22 @@ export default function Header() {
               <i className="fas fa-moon text-gray-800"></i>
             )}
           </button>
+
+          {/* Language toggle */}
+          <button
+            onClick={toggleLang}
+            className="ml-2 px-3 py-1 rounded bg-blue-600 text-gray-700"
+          >
+            {lang.toUpperCase()}
+          </button>
         </div>
-        {/* Mobile menu button */}
+        {/* Mobile menu */}
         <div className="md:hidden">
+          {/* Dark mode */}
           <button
             onClick={toggle}
             className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            aria-label="Sun-Moon"
           >
             {isDark ? (
               <i className="fas fa-sun text-yellow-400"></i>
@@ -59,7 +76,19 @@ export default function Header() {
               <i className="fas fa-moon text-gray-800"></i>
             )}
           </button>
-          <button onClick={() => setOpen(!open)} className="text-gray-700">
+          {/* Language */}
+          <button
+            onClick={toggleLang}
+            className="px-2 py-1 rounded bl-blue-600 text-gray-700 text-sm"
+          >
+            {lang.toUpperCase()}
+          </button>
+          {/* Menu button */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-gray-700"
+            aria-label="bar"
+          >
             <i className="fas fa-bars text-xl"></i>
           </button>
         </div>

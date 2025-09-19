@@ -33,7 +33,7 @@ const socialMedia = [
 
 export default function SocialLinks() {
   return (
-    <div className="mt-16 text-center">
+    <div id="contact" className="mt-16 text-center">
       <h3 className="text-2xl font-bold mb-6 text-gray-800">Kết Nối Với Tôi</h3>
       <div className="flex justify-center space-x-6 items-center">
         {socialMedia.map((item, index) => (
