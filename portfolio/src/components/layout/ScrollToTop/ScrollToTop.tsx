@@ -1,4 +1,4 @@
-import { useScrollPosition } from "../../hooks/index";
+import { useScrollPosition } from "../../../hooks/index";
 
 export default function ScrollToTop() {
   const { y } = useScrollPosition();

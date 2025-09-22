@@ -1,5 +1,5 @@
-import "../../styles/components/skills.css";
-import CardSkill from "../Card/CardSkill";
+import "../../../styles/components/skills.css";
+import CardSkill from "../../common/Card/CardSkill";
 export default function Skills() {
   const skillCards = [
     {

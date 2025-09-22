@@ -1,4 +1,4 @@
-import '../../styles/components/education.css';
+import '../../../styles/components/education.css';
 export default function Education() {
   const degrees = [
     {

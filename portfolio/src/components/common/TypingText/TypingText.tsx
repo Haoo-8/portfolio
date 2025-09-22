@@ -1,4 +1,4 @@
-import { UseTypingEffectOptions } from "../../hooks/useTypingEffect";
+import { UseTypingEffectOptions } from "../../../hooks/useTypingEffect";
 
 interface TypingTextProps {
     texts: string[];

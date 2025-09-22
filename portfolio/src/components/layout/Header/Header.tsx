@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "../../styles/components/header.css";
-import { useDarkMode, useLanguage, useScrollPosition } from "../../hooks";
+import "../../../styles/components/header.css";
+import { useDarkMode, useLanguage, useScrollPosition } from "../../../hooks";
 
 export default function Header() {
   const [open, setOpen] = useState(false);

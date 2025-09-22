@@ -1,5 +1,5 @@
-import "../../styles/components/hero.css";
-import TypingText from "../TypingText/TypingText";
+import "../../../styles/components/hero.css";
+import TypingText from "../../common/TypingText/TypingText";
 
 export default function Hero() {
   return (
