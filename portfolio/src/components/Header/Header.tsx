@@ -19,15 +19,14 @@ export default function Header() {
 
   return (
     <header
-      style={{ backgroundColor: "var(--color-bg)", color: "var(--color-text)" }}
-      className={`sticky top-0 z-50 bg-white shadow-md transition-transform duration-300 ${
+      className={`sticky top-0 z-50 shadow-md transition-transform duration-300 bg-[var(--color-bg)] text-[var(--color-text)] ${
         direction === "down" ? "-translate-y-full" : "translate-y-0"
       }`}
     >
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-blue-600">
-          Dev<span className="text-gray-800">Portfolio</span>
+        <div className="text-2xl font-bold text-[var(--color-primary)]">
+          Dev<span className="text-[var(--color-text)]">Portfolio</span>
         </div>
         {/* Desktop menu */}
         <div className="hidden md:flex justify-center items-center space-x-6">
@@ -36,7 +35,7 @@ export default function Header() {
               id="nav"
               key={link.id}
               href={`#${link.id}`}
-              className="text-gray-700 hover:text-blue-600 transition"
+              className="text-[--color-text] hover:text-[var(--color-primary)] transition"
             >
               {link.label}
             </a>
@@ -44,20 +43,20 @@ export default function Header() {
           {/* Dark mode toggle */}
           <button
             onClick={toggle}
-            className="ml-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            className="ml-4 p-2 rounded-lg bg-[var(--color-bg)] hover:bg-[var(--color-primary)]/20 transition"
             aria-label="Sun or Moon"
           >
             {isDark ? (
               <i className="fas fa-sun text-yellow-400"></i>
             ) : (
-              <i className="fas fa-moon text-gray-800"></i>
+              <i className="fas fa-moon text-[var(--color-text)]"></i>
             )}
           </button>
 
           {/* Language toggle */}
           <button
             onClick={toggleLang}
-            className="ml-2 px-3 py-1 rounded bg-blue-600 text-gray-700"
+            className="ml-2 px-3 py-1 rounded bg-[var(--color-primary)] text-[var(--color-bg)]"
           >
             {lang.toUpperCase()}
           </button>
@@ -102,7 +101,7 @@ export default function Header() {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={() => setOpen(false)}
-                className="text-gray-700 hover:text-blue-600 transition"
+                className="text-[var(--color-text)] hover:text-[var(--color-primary)] transition"
               >
                 {link.label}
               </a>

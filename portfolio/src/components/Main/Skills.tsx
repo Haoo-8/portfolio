@@ -75,10 +75,10 @@ export default function Skills() {
     <section id="skills" className="section">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-3 text-gray-800">
+          <h2 className="text-3xl font-bold mb-3 text-[var(--color-text)]">
             Kỹ Năng Chuyên Môn
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-[var(--color-text)] max-w-2xl mx-auto">
             Những công nghệ và kỹ năng tôi sử dụng để xây dựng các ứng dụng web
             và mobile hiện đại.
           </p>
@@ -112,8 +112,8 @@ function Progress({ label, value }: { label: string; value: number }) {
   return (
     <div className="mb-4">
       <div className="flex justify-between mb-1">
-        <span className="font-medium text-gray-700">{label}</span>
-        <span className="text-gray-600">{value}%</span>
+        <span className="font-medium text-[var(--color-text)]">{label}</span>
+        <span className="text-[var(--color-text)]">{value}%</span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full">
         <div

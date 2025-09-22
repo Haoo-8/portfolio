@@ -16,14 +16,13 @@ function App() {
     <>
       <Header />
       <Hero />
-      
       <Skills />
       <Projects />
       <Experience />
       <Education />
       <Contact />
       <Footer />
-      <ScrollToTop/>
+      <ScrollToTop />
     </>
   );
 }

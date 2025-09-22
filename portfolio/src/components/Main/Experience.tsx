@@ -17,10 +17,10 @@ export default function Experience() {
     <section id="experience" className="section">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-3 text-gray-800">
+          <h2 className="text-3xl font-bold mb-3 text-[var(--color-text)]">
             Kinh Nghiệm Làm Việc
           </h2>
-          <p className="text-gray-600 mx-w-2xl mx-auto">
+          <p className="text-[var(--color-text)] mx-w-2xl mx-auto">
             Quá trình phát triển nghê nghiệp và kinh nghiệm làm việc của tôi.
           </p>
         </div>

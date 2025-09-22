@@ -1,26 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
 
-export const useDarkMode = () => {
-    const [isDark, setIsDark] = useState<boolean>(() => {
-        const saved = localStorage.getItem('darkMode');
-        if (saved !== null) {
-            return JSON.parse(saved);
-        }
-        return window.matchMedia('(prefers-color-scheme: dark').matches;
-    });
+export function useDarkMode() {
+  const [isDark, setIsDark] = useState(() => {
+    // load từ localStorage hoặc default system preference
+    return localStorage.getItem("theme") === "dark" ||
+           (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  });
 
-    useEffect(() => {
-        const root = window.document.documentElement;
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.removeAttribute("data-theme");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDark]);
 
-        if (isDark) {
-            root.classList.add('dark');
-        } else {
-            root.classList.remove('dark');
-        }
+  const toggle = () => setIsDark(!isDark);
 
-        localStorage.setItem('darkMode', JSON.stringify(isDark));
-    }, [isDark]);
-
-    const toggle = () => setIsDark(!isDark);
-    return { isDark, toggle};
-};
+  return { isDark, toggle };
+}
