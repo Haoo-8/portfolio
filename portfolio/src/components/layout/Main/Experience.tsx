@@ -1,6 +1,6 @@
 import CardExperience from "../../common/Card/CardExperience";
 import { useReveal } from "../../../hooks/useReveal";
-import "./ex.css";
+
 const items = [
   {
     role: "Full Stack Developer",
@@ -32,7 +32,7 @@ export default function Experience() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">
+          <h2 className="text-4xl font-bold mb-4  text-[var(--color-text)] sm:text-3xl md:text-4xl sm:mb-4">
             <span className="typing-text">Kinh Nghiệm Làm Việc</span>
           </h2>
           <div className="w-60 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-6 shimmer-bar"></div>

@@ -4,3 +4,4 @@ export { useSound } from './useSound';
 export { UseTypingEffectOptions } from './useTypingEffect';
 export { useIsMobile } from './useIsMobile';
 export { useLanguage } from './useLanguage';
+export { useReveal } from './useReveal';
