@@ -288,8 +288,7 @@ export default function CardProjectDetailModal({ project, onClose }: Props) {
             </motion.div>
           </div>
 
-          {/* Bottom gradient decoration */}
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500"></div>
+         
         </motion.div>
       </motion.div>
     </AnimatePresence>

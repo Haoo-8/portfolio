@@ -6,12 +6,17 @@ export default function ScrollToTop() {
   return (
     <>
       {y > 300 && (
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 shadow-lg"
+        <a
+          href="#top"
+          className="back-to-top active"
+          data-back-to-top=""
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
-          <i className="fas fa-arrow-up text-blue-600"></i>
-        </button>
+          BACK TOP
+        </a>
       )}
     </>
   );
