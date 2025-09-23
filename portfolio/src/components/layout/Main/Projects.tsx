@@ -49,7 +49,7 @@ export default function Projects() {
   ];
 
   const [index, setIndex] = useState(0);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   // Detect screen size
@@ -67,7 +67,7 @@ export default function Projects() {
   const prev = () =>
     setIndex((prev) => (prev - 1 + projects.length) % projects.length);
 
-  const handleProjectClick = (project) => {
+  const handleProjectClick = (project: typeof projects[0]) => {
     setSelectedProject(project);
   };
 
@@ -78,10 +78,12 @@ export default function Projects() {
   // Auto-advance carousel on desktop
   useEffect(() => {
     if (!isMobile) {
-      const interval = setInterval(next, 5000);
+      const interval = setInterval(() => {
+        setIndex((prev) => (prev + 1) % projects.length);
+      }, 5000);
       return () => clearInterval(interval);
     }
-  }, [isMobile, index]);
+  }, [isMobile, projects.length]);
 
   return (
     <section id="projects" className="section bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-12 lg:py-20">
