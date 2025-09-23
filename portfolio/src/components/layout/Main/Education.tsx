@@ -20,9 +20,10 @@ export default function Education() {
     <section id="education" className="section bg-blue-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-3 text-gray-800">
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">
             Học Vấn & Chứng Chỉ
           </h2>
+          <div className="w-60 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-6 shimmer-bar"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Nền tảng giáo dục và các chứng chỉ chuyên môn của tôi.
           </p>
