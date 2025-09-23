@@ -21,7 +21,7 @@ export default function Experience() {
             Kinh Nghiệm Làm Việc
           </h2>
           <p className="text-[var(--color-text)] mx-w-2xl mx-auto">
-            Quá trình phát triển nghê nghiệp và kinh nghiệm làm việc của tôi.
+            Quá trình phát triển nghề nghiệp và kinh nghiệm làm việc của tôi.
           </p>
         </div>
         <div className="max-w-3xl mx-auto timeline-container">
