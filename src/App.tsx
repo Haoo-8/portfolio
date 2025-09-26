@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/layout/Header/Header";
-import Hero from "./components/layout/Main/Hero";
+import { Hero } from "./features/hero";
 import Skills from "./components/layout/Main/Skills";
 import Projects from "./components/layout/Main/Projects";
 import Experience from "./components/layout/Main/Experience";

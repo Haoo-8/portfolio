@@ -134,9 +134,9 @@ export default function Education() {
   );
 
   const EducationCard: React.FC<EducationCardProps> = ({ item, type }) => {
-    const isDegree = (item: Degree | Certificate): item is Degree =>
+    const isDegree = (_item: Degree | Certificate): _item is Degree =>
       type === "degree";
-    const isCertificate = (item: Degree | Certificate): item is Certificate =>
+    const isCertificate = (_item: Degree | Certificate): _item is Certificate =>
       type === "cert";
 
     return (
@@ -250,7 +250,7 @@ export default function Education() {
   );
 
   return (
-    <section className="py-12 bg-gradient-to-br from bg-blue-50 to-indigo-100 min-h-screen lg:py-20 ">
+    <section id="education" className="py-12 bg-gradient-to-br from bg-blue-50 to-indigo-100 min-h-screen lg:py-20 ">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
